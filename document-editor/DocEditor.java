@@ -4,6 +4,10 @@ import java.util.List;
 import java.io.FileWriter;
 import java.io.IOException;
 
+interface DocumentElement{
+    public abstract String render();
+}
+
 public class DocEditor {
     public static void main(String[] args){
         DocumentEditor editor = new DocumentEditor();
