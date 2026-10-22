@@ -56,7 +56,7 @@ class DocumentEditor{
 
     public void saveToFile(){
         try{
-            FileWriter writer = new FileWriter("document-editor/document.txt");
+            FileWriter writer = new FileWriter("document-editor/document.txt",true);
             writer.write(renderDocument());
             writer.close();
 
