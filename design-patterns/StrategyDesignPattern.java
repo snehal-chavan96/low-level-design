@@ -1,24 +1,3 @@
-// --- Main Function ---
-public class StrategyDesignPattern {
-    public static void main(String args[]){
-        GameCharacter warrior = new Warrior(new SwordAttack(), new ShieldDefense(),new RunMovement());
-
-        warrior.display();
-        warrior.attack();
-        warrior.defend();
-        warrior.move();
-
-        System.out.println("--------------------");
-
-        GameCharacter wizard = new Wizard(new GunAttack(), new MagicDefense(), new TeleportMovement());
-
-        wizard.display();
-        wizard.attack();
-        wizard.defend();
-        wizard.move();
-        
-    }
-}
 
 // --- Strategy Interface for Attack ---
 interface AttackBehaviour {
@@ -148,3 +127,24 @@ class Wizard extends GameCharacter{
 }
 
 
+// --- Main Function ---
+public class StrategyDesignPattern {
+    public static void main(String args[]){
+        GameCharacter warrior = new Warrior(new SwordAttack(), new ShieldDefense(),new RunMovement());
+
+        warrior.display();
+        warrior.attack();
+        warrior.defend();
+        warrior.move();
+
+        System.out.println("--------------------");
+
+        GameCharacter wizard = new Wizard(new GunAttack(), new MagicDefense(), new TeleportMovement());
+
+        wizard.display();
+        wizard.attack();
+        wizard.defend();
+        wizard.move();
+        
+    }
+}
